@@ -12,15 +12,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
             template: './src/index.html',
             minify: false,
             hash: true
-        }),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        })
     ],
     devtool: 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
-        inline: true,
-        hot: true,
         host: 'localhost',//默认值 也可以改为 127.0.0.1 或者其他
         port: 8080,
         proxy: {
